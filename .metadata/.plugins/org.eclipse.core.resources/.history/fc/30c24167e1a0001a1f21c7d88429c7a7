@@ -1,0 +1,15 @@
+package algorithm;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Boj5052 {
+
+	public static void main(String[] args) {
+		Map<K, V> = new HashMap<>();
+		Scanner scan = new Scanner(System.in);
+		int t = scan.nextInt();
+	}
+
+}

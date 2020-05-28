@@ -1,0 +1,22 @@
+package algorithm;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Boj5052 {
+
+	public static void main(String[] args) {
+		Map<Integer , String> map = new HashMap<>();
+		Scanner scan = new Scanner(System.in);
+		int t = scan.nextInt();
+		for(int i = 0 ;i < t; i++) {
+			int people = scan.nextInt();
+			for(int j = 0 ; j < people ; j++) {
+				String phoneNum = scan.next();
+				map.put(j, );
+			}
+		}
+	}
+
+}
