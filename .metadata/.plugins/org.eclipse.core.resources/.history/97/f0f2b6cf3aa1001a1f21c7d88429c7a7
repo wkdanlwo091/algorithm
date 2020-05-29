@@ -1,0 +1,45 @@
+package algorithm;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Boj5052 {
+	public static void main(String[] args) {
+		
+		//50 * 10 * 100000 번  최악의 케이스 
+		Map<Long , Long> map = new HashMap<>();
+		Scanner scan = new Scanner(System.in);
+		int t = scan.nextInt();
+		for(int i = 0 ;i < t; i++) {
+			int people = scan.nextInt();
+			for(int j = 0 ; j < people ; j++) {
+				int out = 0;
+				long phoneNum = scan.nextLong();
+				if(map.get(phoneNum) == null) {
+					map.put(phoneNum, 1);
+					String phoneString = Integer.toString(phoneNum);
+					for(int k = 0 ; k < phoneString.length()-1; k++) {
+						if(map.get(Integer.parseInt(phoneString.substring(0, k+1))) != null) {
+							System.out.println("NO");
+							out = 1;
+							break;
+						}else {
+							
+						}
+					}
+				}
+				else {
+					System.out.println("NO");
+					break;
+				}
+				if(out == 1) {
+					break;
+				}
+				if(j == people-1)
+					System.out.println("YES");
+			}
+			map.clear();
+		}
+	}
+}

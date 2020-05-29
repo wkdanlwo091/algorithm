@@ -1,0 +1,16 @@
+package algorithm;
+
+public class LinkedList {
+	Node head;
+	
+	static class Node{//inner class 
+		//inner class는 default가 static 이다. 
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

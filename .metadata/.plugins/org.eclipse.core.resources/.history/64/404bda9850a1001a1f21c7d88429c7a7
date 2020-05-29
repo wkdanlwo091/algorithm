@@ -1,0 +1,41 @@
+package Boj5052;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Boj5052 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int t = scan.nextInt();
+		for(int i = 0 ;i < t;i++) {
+			int n = scan.nextInt();
+			long phoneNum[] = new long[n];
+			for(int j = 0 ;j < n;j++) {
+				phoneNum[j] = scan.nextLong();
+			}
+			Arrays.parallelSort(phoneNum);
+			
+			
+		}
+	}
+}
+class Trie{
+	char c;
+	HashMap<Character, Trie> children; 
+	
+	public Trie(char c){
+		this.c = c;
+		children = new HashMap<Character, Trie>();
+	}
+	Trie putChild(Trie t) {
+		if(!t.children.containsKey(t.c)) {
+			t.putChild(t);
+		}
+		return children.get(t.c);
+	}
+	Trie getChild(char c) {
+		return children.get(c);
+	}
+}

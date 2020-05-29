@@ -1,0 +1,17 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class Main5052_2 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int t = scan.nextInt();
+		for(test = 0 ; test< t; test++) {
+			
+		}
+	}
+	
+	static class Trie{
+		
+	}
+}

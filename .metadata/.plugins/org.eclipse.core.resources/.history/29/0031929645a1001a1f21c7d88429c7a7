@@ -1,0 +1,27 @@
+package algorithm;
+
+import java.util.HashMap;
+
+public class Trie {
+
+	public static void main(String[] args) {
+		System.out.println("haha");
+	}
+}
+class TrieNode{
+		char c;
+		HashMap<Character,TrieNode> children;
+		public TrieNode(char c) {
+			this.c = c;
+			children = new HashMap<Character, TrieNode>();
+		}
+		TrieNode putChild(TrieNode t) {
+			if(!children.containsKey(t.c)) {
+				children.put(t.c, t);
+			}
+			return children.get(t.c);
+		}
+		TrieNode getChild(char c) {
+			return children.get(c);
+		}
+}

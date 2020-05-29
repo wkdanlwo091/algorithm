@@ -1,0 +1,14 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class Main5052_2 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		scan.NextInt();
+	}
+	
+	static class Trie{
+		
+	}
+}
