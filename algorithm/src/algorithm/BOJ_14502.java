@@ -4,7 +4,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-import Boj5052.Point;
 
 class Point {
 	int y, x;

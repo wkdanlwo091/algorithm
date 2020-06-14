@@ -1,0 +1,30 @@
+package Boj5052;
+
+import java.util.Scanner;
+
+public class Boj_1157 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String string = scan.next();
+		int []arr = new int[26];
+		int overlap[] = new int[26];
+		int charMax = -1;
+		for(int i = 0 ;i < string.length();i++) {
+			if(string.charAt(i)>='a') {
+				arr[string.charAt(i)-'a']++;
+			}else {
+				arr[string.charAt(i) - 'A']++;
+			}
+		}
+		
+		for(int i = 0 ;i < 26;i++) {
+			charMax = Math.max(arr[i], charMax);
+			if(charMax == arr[i]) {
+				overlap[i]++;
+			}
+		}
+		System.out.println(charMax);
+	}
+
+}
