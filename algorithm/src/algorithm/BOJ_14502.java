@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+import Boj5052.Point;
+
 class Point {
 	int y, x;
 	public Point(int y, int x) {
@@ -31,21 +33,27 @@ public class BOJ_14502 {
 				bfsMap[i][j] = map[i][j];
 			}
 		}
+		int twoNum = 0;
+		
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < M; j++) {
 				if (bfsMap[i][j] == 2  && bfsVisit[i][j] == 0) {// 바이러스 전파
 					q.offer(new Point(i, j));
 					while (!q.isEmpty()) {
 						
+						twoNum++;
 						Point temp = q.poll();
 						bfsVisit[temp.y][temp.x] = 1;
 						bfsMap[temp.y][temp.x] = 2;
-
-						for (int k = 0; k < 4; k++) {
-							int nextY = temp.y + yAt[k];
-							int nextX = temp.x + xAt[k];
-							if (nextY < N && nextY >= 0 && nextX < M && nextX >= 0 && bfsVisit[nextY][nextX] == 0 && bfsMap[nextY][nextX] == 0) {
-								q.offer(new Point(nextY, nextX));
+						if(twoNum == 9 ) {
+							break;
+						}else {
+							for (int k = 0; k < 4; k++) {
+								int nextY = temp.y + yAt[k];
+								int nextX = temp.x + xAt[k];
+								if (nextY < N && nextY >= 0 && nextX < M && nextX >= 0 && bfsVisit[nextY][nextX] == 0 && bfsMap[nextY][nextX] == 0) {
+									q.offer(new Point(nextY, nextX));
+								}
 							}
 						}
 					}

@@ -1,0 +1,19 @@
+package algorithm;
+
+
+class Point{
+	int y;
+	int depth;
+	public Point() {
+		
+	}
+	
+}
+
+public class StackTest {
+
+	public static void main(String[] args) {
+		Stack<>
+	}
+
+}
