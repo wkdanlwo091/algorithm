@@ -1,0 +1,43 @@
+package algorithm;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+
+
+public class Programmers_kakao1 {
+	
+    public int solution(String s) {
+        int answer = s.length();
+        
+        for(int i = 1 ;i< s.length()/2;i++ ) {
+        	int pos = 0;
+        	int len = s.length();
+        	for( ; pos + i <=s.length(); ) {
+        		String unit = s.substring(pos, pos + i);
+        		pos += i;
+        		int cnt = 0;
+        		for(; pos + i<= s.length();) {
+        			if(unit.equals(s.substring(pos, pos+i))) {
+        				++cnt;
+        				pos += i;
+        			}else {
+        				break;
+        			}
+        		}
+        		
+        		if(cnt > 0) {
+        			len-= i * cnt;
+        			
+        			len += 1;
+        		}
+        		
+        	}
+        }
+        return answer;
+    }
+	public static void main(String[] args) throws Exception {
+		Programmers_kakao1 a = new Programmers_kakao1();
+		System.out.println(a.solution("aabbaccc"));
+	}//end of main
+}

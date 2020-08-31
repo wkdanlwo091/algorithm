@@ -1,0 +1,42 @@
+package algorithm;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+
+
+public class Programmers_kakao1 {
+	
+    public int solution(String s) {
+        int answer = s.length();
+        int temp = 0;
+        
+        for(int i = 1 ;i< s.length()/2;i++ ) {//i개로 자르기 최대가 반으로 자르기
+        	//1개로 자르기
+        	temp = 0;
+        	int k = 0;
+        	for(int j = 0;j < s.length();j = j + i) {//aabbaccc
+        		int temp2 = 0;
+        		//1개로 짜르기
+        		if(s.charAt(j) == s.charAt(k)) {// aa--> 2a
+        			temp2++;
+        			if(j == s.length()-1) {//last index 거나 
+        				
+        			}else if(j < s.length() ) {//index 안에 있을 때
+        				if(s.charAt(j) s.charAt(k)) {
+        					
+        				}
+        			}
+        		}else if(s.charAt(j) != s.charAt(k)) {//다를 때 aab
+        			k = j;//j = 2
+        			
+        		}
+        	}
+        }
+        return answer;
+    }
+	public static void main(String[] args) throws Exception {
+		Programmers_kakao1 a = new Programmers_kakao1();
+		System.out.println(a.solution("aabbaccc"));
+	}//end of main
+}

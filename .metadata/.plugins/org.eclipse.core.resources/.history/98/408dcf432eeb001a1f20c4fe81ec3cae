@@ -1,0 +1,44 @@
+package algorithm;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+
+import algorithm.Main5052.Trie;
+
+public class Programmers_kakao1 {
+	
+	
+    public int solution(String s) {
+        int answer = s.length();
+        int temp  = 0;//템프는 임시로 문자열의 길이를 담는다. 
+        answer = s.length();
+        for(int i = 2 ;i < s.length(); i++){//i 개 단위로 짜르다. 
+            temp = 0;
+            for(int j = 0 ;j< s.length(); j = j + i*2){ // 문자열을 검사한다. 2개씩 검사하면 j = 0 , j = 4(2*2)이런 식으로 증가
+                if(j + i*2 < s.length()){//2개씩 검사하면  0,1,2,3의 문자가 존재해야한다. 
+                    for(int k = j; k < j+i; k++){// 2*i의 
+                        if(s.charAt(k) == s.charAt(k+i)){// aaaa  s[k] and s[k+2]같다. 
+                            if(k == j+i-1){
+                                //종료 조건 부합하면
+                                temp = temp + 1+ i; //ex) 2abc  1더하기 3개로 나눈다. 
+                            }
+                        }else{//i개로 자르지 못할 때
+                            j = j + i*2;//요번 텀을 넘어간다. 
+                            temp =temp + i*2; //2개씩이면4칸넘어가고3개씩이면 6칸 넘어가고 
+                            break;
+                        }
+                    }
+                }
+                else if(j + i*2 >= s.length()){// 0, 1,2 ,3 의 index가 전체 index를 넘어갈 때
+                    //2개씩 짜르는데 4개 존재 안하면 존재 하는 것까지의 길이를 0,1,2까지 붙여
+                    temp = temp + s.length() - j;// 총길이 3 - index 0---> 3개
+                }
+            }
+        }
+        return answer;
+    }
+	public static void main(String[] args) throws Exception {
+	}//end of main
+
+}

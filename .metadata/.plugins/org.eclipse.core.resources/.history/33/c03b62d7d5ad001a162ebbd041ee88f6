@@ -1,9 +1,0 @@
-package Boj5052;
-
-public class Tests {	
-	public static void main(String[] args) {
-		StringBuilder stringBuilder = new StringBuilder();
-		String string3 = "three";
-		String string2 = "two";
-	}
-}

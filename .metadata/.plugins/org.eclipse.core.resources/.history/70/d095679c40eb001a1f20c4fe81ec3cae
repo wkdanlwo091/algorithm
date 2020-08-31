@@ -1,0 +1,52 @@
+package algorithm;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+
+
+public class Programmers_kakao1 {
+	
+    public int solution(String s) {
+        int answer = s.length();
+        int temp = 0;
+        
+        for(int i = 1 ;i< s.length()/2;i++ ) {//i개로 자르기 최대가 반으로 자르기
+        	//1개로 자르기
+        	temp = 0;
+        	int k = 0;//비교할 문자
+    		int temp2 = 0;
+        	for(int j = 0;j < s.length();j = j + i) {//aabbaccc 
+        		//1개로 짜르기
+        		if(s.charAt(j) == s.charAt(k)){// aa--> 2a, a면 1
+        			temp2++;
+        			if(j == s.length()-1) {//last index 거나 aa-->2a
+        				if(temp2 > 1)// 2면 aaa --> 3a aa--> 2a
+        					temp += 2;
+        				else if(temp2 == 1){// a한개면 
+        					temp += 1;
+        				}
+        				temp2 = 0;
+        			}
+        		}else if(s.charAt(j) != s.charAt(k)) {//다를 때 aab에서 b에 왓을 때2a를 더한다. 
+        			if(temp2 > 1) {//--> aa --> 2a 
+        				temp += 2;
+        			}else if(temp2 == 1){// a --> a 
+        				temp += 1;
+        			}
+        			temp += temp2;
+        			temp2 = 0;
+        			//k 인덱스는 j가 된다. 
+        			k = j;
+        			j--;//j를 b위치에 다시 돌려 놓는다. 
+        		}
+        		System.out.println( i +" " +" " + j +" "+temp);
+        	}
+        }
+        return answer;
+    }
+	public static void main(String[] args) throws Exception {
+		Programmers_kakao1 a = new Programmers_kakao1();
+		System.out.println(a.solution("aabbaccc"));
+	}//end of main
+}

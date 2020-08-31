@@ -1,0 +1,40 @@
+package algorithm;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+
+
+public class Programmers_kakao1 {
+	
+    public int solution(String s) {
+        int answer = s.length();
+        int temp = 0;
+        
+        for(int i = 1 ;i< s.length()/2;i++ ) {//i개로 자르기 최대가 반으로 자르기
+        	temp = 0;
+        	
+        	for(int j = 0;j < s.length();j = j + i) { 
+        		
+        		if(j+i < s.length() && j+i+i <= s.length()) {//비교하는 것이 끝에 안 걸리게
+            		if(s.substring(j, j+i).equals(s.substring(j+i, j+i+i))) {
+            			//a와 a가 같으면 2a  aaaa --> 2aa  
+            			temp = temp + i+ 1;
+            		}else {//ab 로 안 같으면 
+            			temp = temp +i*2;//aa면 2 aabb면 4 
+            		}
+        		}else {
+        			//끝에 남은 조각은 비교할 수 없으면 그냥 더해 
+        			temp = temp + i;
+        		}
+        	}
+        	
+        }
+        return answer;
+    }
+    
+	public static void main(String[] args) throws Exception {
+		Programmers_kakao1 a = new Programmers_kakao1();
+		System.out.println(a.solution("aabbaccc"));
+	}//end of main
+}

@@ -1,0 +1,35 @@
+package algorithm;
+
+public class Programmers_kakao1 {
+	
+	
+    public int solution(String s) {
+        int answer = s.length();
+        int temp  = 0;
+        answer = s.length();
+        for(int i = 2 ;i < s.length(); i++){//i 개 단위로 짜르다. 
+            temp = 0;
+            for(int j = 0 ;j< s.length(); j = j + i*2){ // 문자열을 검사한다. aaaa 검사하면 j = 0 j = 1까지 검사
+                if(j + i*2 < s.length()){//2개씩 짜르면 4개가 존재해야 
+                    for(int k = j; k < j+i; k++){// 2*i의 
+                        if(s.charAt(k) == s.charAt(k+i)){// aaaa  s[k] and s[k+2]같다. 
+                            if(k == j+i-1){
+                                //종료 조건 부합하면
+                                temp = temp + 1+ i; //ex) 2abc  1더하기 3개로 나눈다. 
+                            }
+                        }else{//i개로 자르지 못할 때
+                            j = j + i*2;//요번 텀을 넘어간다. 
+                            temp =temp + i*2; //2개씩이면4칸넘어가고3개씩이면 6칸 넘어가고 
+                            break;
+                        }
+                    }
+                }
+                else if(j + i*2 >= s.length()){
+                    //2개씩 짜르는데 4개 존재 안하면 그대로 갯수를 붙여 
+                    temp = temp + s.substring(j,s.length()).length();// aab 면 3개를붙여
+                }
+            }
+        }
+        return answer;
+    }
+}
