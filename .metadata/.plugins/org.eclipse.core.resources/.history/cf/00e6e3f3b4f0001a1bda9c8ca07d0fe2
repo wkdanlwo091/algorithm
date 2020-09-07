@@ -1,0 +1,22 @@
+package algorithm;
+
+public class Katalk_1 {
+
+	
+	
+	public int solution(String s) {
+		int answer = 0;
+		
+        for(int i = 1 ;i < s.length()/2 ;i++){//i개로 압축하기 , 최대 압축은 문자열길이의 반이다. 
+            
+        	
+        	
+        }
+	    return answer;
+	}
+
+	public static void main(String[] args) {
+		Katalk_1 a  =new Katalk_1();
+		System.out.println(a.solution("aabbaccc"));
+	}
+}
