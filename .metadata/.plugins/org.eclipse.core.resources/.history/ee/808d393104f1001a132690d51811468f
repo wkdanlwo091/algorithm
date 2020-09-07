@@ -1,0 +1,221 @@
+package algorithm;
+
+public class Katalk_3 {
+		
+		public boolean dfs(int[][] key, int[][] lock) {
+			
+			int keyLen = key.length;
+			int lockLen = lock.length;
+			int lockHole = 0;
+			int keyHole = 0;
+			
+			if(keyLen < lockLen) {
+				//¿­¼è Ã¼Å© 
+
+				for(int i = 0;i<lockLen;i++) {
+					for(int j = 0 ;j< lockLen;j++) {
+						if(lock[i][j] == 0) {
+							lockHole++;
+						}
+					}
+				}
+				
+				for(int i = 0;i<keyLen;i++) {
+					for(int j = 0 ;j< keyLen;j++) {
+						if(key[i][j] == 1) {
+							keyHole++;
+						}
+					}
+				}
+				
+				if(lockHole != keyHole) {
+					
+				}else {//°°À» °æ¿ì °Ë»ç
+					
+					int temp = 1;//temp°¡ 1ÀÌ¸é ¾ÆÁ÷ ½ÂÆÐ ¸ð¸§ 
+					int success = 0;
+					
+					for(int i = 0;i < lockLen ; i++) {
+						
+						if(i+ keyLen  > lockLen) {
+							continue;
+						}
+							
+						for(int j = 0 ;j < lockLen  ; j++) {
+							
+							if(j+ keyLen  > lockLen) {
+								continue;
+							}else {
+								
+								for(int k = 0; k <keyLen ;k++) {
+									
+									for(int l = 0; l < keyLen ; l++) {
+										
+										if(key[k][l] == 1 ) {
+											
+											if(lock[i+k][j+l] == 0) {
+												
+											}else {//¶ô È¦ÀÌ ¾Æ´Ò ‹š Á¾·á
+												temp = 0;// ÆÐ¹è
+											}
+										}
+										
+									}
+								}
+								if(temp == 1) {
+									return true;
+								}else {
+									temp = 1;
+								}
+								
+								
+								
+							}
+							
+						}
+					}
+					
+				}
+				
+				
+				
+			}else {
+				
+				for(int i = 0 ;i < lockLen;i++) {
+					for(int j = 0 ;j < lockLen;j++) {
+						if(lock[i][j] == 0) {
+							lockHole++;
+							if(key[i][j] == 1) {
+								keyHole++;
+							}
+						}
+					}
+				}
+
+				if(keyHole == lockHole) {//Á¶±â Á¾·á 
+					return true;
+				}else {
+					
+				}
+				
+			}
+			
+			
+			
+			int[][] newKey = new int[keyLen][keyLen];
+
+			
+			//¿ì 90µµ
+			
+			for(int i = 0 ;i<keyLen;i++) {
+	
+				for(int j = 0;j < keyLen;j++) {
+					newKey[i][j] =  key[keyLen-1-j][i];
+				}
+				
+			}
+			dfs(newKey, lock);
+			//ÁÂ 90µµ 
+			
+			newKey = new int[keyLen][keyLen];
+
+			for(int i = 0 ;i<keyLen;i++) {
+				
+				for(int j = 0;j < keyLen;j++) {
+					newKey[i][j] =  key[j][keyLen-1-i];
+				}
+				
+			}
+			dfs(newKey, lock);
+
+			
+			
+			//¿À¸¥ÂÊ ÇÑÄ­
+			
+			
+			newKey = new int[keyLen][keyLen];
+
+			for(int i= 0;i < keyLen;i++) {
+				for(int j = 0; j< keyLen;j++) {
+					if(i == 0) {
+						newKey[j][i] = 0;//¸Ç ÁÂÃø¿¡ »ý±äÇÑÄ­
+					}else {
+						newKey[j][i] = key[j][i-1];
+					}
+				}
+			}
+			
+			
+			dfs(newKey, lock);
+
+			//¿ÞÂÊ ÇÑÄ­
+			
+			newKey = new int[keyLen][keyLen];
+
+			for(int i= 0;i < keyLen;i++) {
+				for(int j = 0; j< keyLen;j++) {
+					if(i == 2) {
+						newKey[j][i] = 0;//¸Ç ÁÂÃø¿¡ »ý±äÇÑÄ­
+					}else {
+						newKey[j][i] = key[j][i+1];
+					}
+				}
+			}
+			
+			
+			dfs(newKey, lock);
+
+			
+			//À§ÂÊ ÇÑÄ­
+			newKey = new int[keyLen][keyLen];
+
+			for(int i= 0;i < keyLen;i++) {
+				for(int j = 0; j< keyLen;j++) {
+					if(i == 2) {
+						newKey[i][j] = 0;//¸Ç ÁÂÃø¿¡ »ý±äÇÑÄ­
+					}else {
+						newKey[i][j] = key[i+1][j];
+					}
+				}
+			}
+			
+			
+			dfs(newKey, lock);
+
+			//¾Æ·¡ÂÊ ÇÑÄ­ 
+			newKey = new int[keyLen][keyLen];
+
+			for(int i= 0;i < keyLen;i++) {
+				for(int j = 0; j< keyLen;j++) {
+					if(i == 0) {
+						newKey[i][j] = 0;//¸Ç ÁÂÃø¿¡ »ý±äÇÑÄ­
+					}else {
+						newKey[i][j] = key[i-1][j];
+					}
+				}
+			}
+			
+			
+			dfs(newKey, lock);
+			
+			return false;
+			
+		}
+	
+	    public boolean solution(int[][] key, int[][] lock) {
+	        boolean answer = true;
+	        
+	        dfs(key, lock);
+	        
+	        return answer;
+	    }
+	 
+	public static void main(String[] args) {
+		Katalk_3 katalk_3 = new Katalk_3();
+		
+		int [][] temp = {{0, 0, 0}, {1, 0, 0}, {0, 1, 1}};
+		int [][] temp2 = {{1, 1, 1}, {1, 1, 0}, {1, 0, 1}};
+		katalk_3.solution( temp, temp2) ;
+	}
+
+}

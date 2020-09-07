@@ -1,0 +1,26 @@
+package algorithm;
+
+public class Katalk_3 {
+		
+		public void dfs() {
+			
+		}
+	
+	
+	    public boolean solution(int[][] key, int[][] lock) {
+	        boolean answer = true;
+	        
+	        dfs();
+	        
+	        return answer;
+	    }
+	 
+	public static void main(String[] args) {
+		Katalk_3 katalk_3 = new Katalk_3();
+		
+		int [][] temp = {{0, 0, 0}, {1, 0, 0}, {0, 1, 1}};
+		int [][] temp2 = {{1, 1, 1}, {1, 1, 0}, {1, 0, 1}};
+		katalk_3.solution( temp, temp2) ;
+	}
+
+}

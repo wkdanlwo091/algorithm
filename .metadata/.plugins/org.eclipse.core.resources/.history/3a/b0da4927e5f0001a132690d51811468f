@@ -1,0 +1,16 @@
+package algorithm;
+
+public class Katalk_3 {
+	    public boolean solution(int[][] key, int[][] lock) {
+	        boolean answer = true;
+	        return answer;
+	    }
+	
+	public static void main(String[] args) {
+		Katalk_3 katalk_3 = new Katalk_3);
+		
+		katalk_3.solution([[0, 0, 0], [1, 0, 0], [0, 1, 1]]	, [[1, 1, 1], [1, 1, 0], [1, 0, 1]]) ;
+	
+	}
+
+}
