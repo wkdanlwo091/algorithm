@@ -27,23 +27,23 @@ public class Katalk_1 {
         		}
         		
         		if( temp.equals(s.substring(j, j+i))) {//같다.
-        			System.out.println("1 " + j);
+        			//System.out.println("1 " + j);
         			index++;
         		}
         		else {
-        			System.out.println("2 " + j);
+        			//System.out.println("2 " + j);
         			if(index == 1)
         				tempAnswer = tempAnswer + i;//전에 증가한 index 더하고 
         			else if(index != 1) {
         				tempAnswer = tempAnswer + Integer.toString(index).length() + i;// 50a일때     숫자 길이 + 자른 숫자  2+1
         			}
-        			System.out.println("tempAnswer는" + tempAnswer);
+        			//System.out.println("tempAnswer는" + tempAnswer);
         			index = 1;//인덱스 한개로 복귀
         			temp = s.substring(j, j+i);
         		}
         		
         		if(j == s.length()-i) {//마지막 index 
-        			System.out.println("3" + j);
+        			//System.out.println("3" + j);
         			if(index == 1) {
         				tempAnswer = tempAnswer +i;
         			}else if(index != 1) {
