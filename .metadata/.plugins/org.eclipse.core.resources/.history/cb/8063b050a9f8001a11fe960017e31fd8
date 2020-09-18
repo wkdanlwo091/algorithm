@@ -1,0 +1,36 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_9663_2 {
+	static int ans, n;
+	static int[] col;
+
+	static void check() {
+		
+	}
+	
+	static void dfs(int row) {
+		if(row == n) {
+			ans++;
+		}
+
+		
+		for(int i= 0;i< n;i++) {
+			
+			if(check(row+1))
+			row+1;
+		}
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+		for(int i = 1;i <= n ;i++) {
+			col = new int[15];//최대 col은 15개
+			col[1]= i;//인덱스는 열 값은 행
+			dfs(1);
+		}
+		System.out.println(ans);
+	}
+}

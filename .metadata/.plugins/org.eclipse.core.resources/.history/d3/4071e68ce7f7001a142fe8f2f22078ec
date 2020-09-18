@@ -1,0 +1,28 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_15651 {
+	static int N;
+	static int M;
+	static int arr[];
+	static int visit[];
+	
+	static void dp(int cnt) {
+		
+		if(cnt == M) {
+			return;
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		N = scan.nextInt();
+		M = scan.nextInt();
+		
+		dp(0);
+	}
+	
+}

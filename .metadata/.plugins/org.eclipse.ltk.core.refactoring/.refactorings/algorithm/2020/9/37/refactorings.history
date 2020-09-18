@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;algorithm.Muji&apos; to &apos;Katalk_muji&apos;&#x0D;&#x0A;- Original project: &apos;algorithm&apos;&#x0D;&#x0A;- Original element: &apos;algorithm.Muji&apos;&#x0D;&#x0A;- Renamed element: &apos;algorithm.Katalk_muji&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Muji&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;algorithm{Muji.java[Muji" matchStrategy="1" name="Katalk_muji" qualified="false" references="true" similarDeclarations="false" stamp="1599631969932" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,15 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_9663_2 {
+	static int ans, n;
+	static int[] col;
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+		for(int i = 0;i <=n )
+		
+	}
+}

@@ -1,0 +1,17 @@
+package algorithm;
+
+public class Line2020_1 {
+    public int solution(int[][] boxes) {
+        int answer = -1;
+        return answer;
+    }
+
+	
+	public static void main(String[] args) {
+		
+		Line2020_1 line = new Line2020_1();
+		katalk1.solution("...!@BaT#*..y.abcdefghijklm");
+		
+		}
+
+}

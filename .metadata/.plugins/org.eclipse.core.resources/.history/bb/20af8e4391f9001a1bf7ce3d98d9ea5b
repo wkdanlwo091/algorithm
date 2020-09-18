@@ -1,0 +1,13 @@
+package algorithm;
+
+public class WebCashBruteForce {
+	
+	static int arr[];
+	static int visit[];
+	static int n;
+	
+	public static void main(String[] args) {
+		
+	}
+	
+}

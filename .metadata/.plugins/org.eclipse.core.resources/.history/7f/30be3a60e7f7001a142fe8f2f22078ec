@@ -1,0 +1,13 @@
+package algorithm;
+
+public class BOJ_15651 {
+	static int N;
+	static int M;
+	static int arr[];
+	static int visit[];
+	
+	public static void main(String[] args) {
+
+	}
+	
+}
