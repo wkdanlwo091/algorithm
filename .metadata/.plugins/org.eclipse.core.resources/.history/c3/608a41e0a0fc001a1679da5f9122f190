@@ -1,0 +1,40 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_12865 {
+	
+	static int N;
+	static int K;
+	static int W[];
+	static int V[];
+	static int p[][];
+	
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		K = scan.nextInt();
+		p = new int[N+1][N+1];
+		W = new int[N+1];
+		V = new int[N+1];
+		
+		for(int i= 1;i <= N;i++) {
+			W[i] = scan.nextInt();
+			V[i] = scan.nextInt();
+		}
+		
+		for(int i= 1;i <= N;i++) {
+			
+			for(int w = 1;w <= K;w++) {//w는 배낭의 무게 
+				if(W[i] > w) {
+					System.out.println(p[i-1][w]);
+					p[i][w] = p[i-1][w];// if i = 1이면 p[i][w] = 0;
+				}else {
+					p[i][w] = Math.max(V[i] + p[i-1][w-W[i]], p[i-1][w]);
+				}
+			}
+		}
+		System.out.println(p[N][K]);
+	}
+}

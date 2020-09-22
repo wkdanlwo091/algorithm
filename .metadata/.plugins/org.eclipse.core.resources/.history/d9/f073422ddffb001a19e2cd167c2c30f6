@@ -1,0 +1,44 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_14889 {
+
+	static int arr[];
+	static int visit[];
+	static int N;
+	static int map[][];
+	
+	static void dfs(int cnt) {
+		if(cnt == N/2) {
+			
+			return;
+		}
+		
+		for(int i= 0;i< N;i++) {
+			if(visit[i] == 0 && arr[i] > ) {
+				
+				visit[i] = 1;
+				arr[i] = i+1;
+				dfs(cnt+1);
+				visit[i] = 0;
+			}
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		N = scan.nextInt();
+		visit = new int[N];
+		arr = new int[N];
+		map = new int[N][N];
+		
+		for(int i= 0 ;i < N;i++) {
+			for(int j = 0;j< N;j++) {
+				map[i][j] = scan.nextInt();
+			}
+		}
+	}
+}

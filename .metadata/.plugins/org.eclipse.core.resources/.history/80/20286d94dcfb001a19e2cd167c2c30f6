@@ -1,0 +1,17 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_14889 {
+
+	static int [] arr;
+	static int N;
+	static int map[][];
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		N = scan.nextInt();
+		map = new int[N][N];
+		
+	}
+}

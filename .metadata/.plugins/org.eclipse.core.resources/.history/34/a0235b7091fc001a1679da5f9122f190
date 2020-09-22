@@ -1,0 +1,47 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_12865 {
+	
+	static int N;
+	static int K;
+	static int W[];
+	static int V[];
+	static int max;
+	static int p[];
+	
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		K = scan.nextInt();
+		p = new int[N];
+		
+		for(int i= 0;i < N;i++) {
+			W[i] = scan.nextInt();
+			V[i] = scan.nextInt();
+		}
+		
+		int myK = K;
+		for(int i= 0;i < N;i++) {
+			if(myK >= W[i]) {
+				
+				myK -= W[i];
+				
+				
+			}else if(myK < W[i]) {
+				
+				if(i == 0) {
+				
+				}else {
+					p[i] = p[i-1];
+
+				}
+			}
+		}
+		
+		System.out.println(max);
+	}
+	
+}

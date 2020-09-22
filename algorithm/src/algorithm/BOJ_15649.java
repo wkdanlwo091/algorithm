@@ -18,6 +18,7 @@ public class BOJ_15649 {
 			System.out.println();
 			return;
 		}
+		
 		//visit 배열
 		for(int i= 1 ;i <= N;i++) {
 			if(!visit[i]) {//false이면

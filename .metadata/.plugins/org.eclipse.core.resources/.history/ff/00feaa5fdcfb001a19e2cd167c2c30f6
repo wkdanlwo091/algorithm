@@ -1,0 +1,16 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_14889 {
+
+	static int [] arr;
+	static int N;
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		N = scan.nextInt();
+		
+	}
+}

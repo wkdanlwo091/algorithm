@@ -1,0 +1,60 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_14888 {
+	
+	static int N;
+	static int arr[];
+	static int oper[];
+	static int max;
+	static int min;
+	static int operator[];
+	static int visit[];
+	
+	static void dfs(int cnt) {
+		
+		if(cnt == N-1) {
+			
+		}
+		
+		for(int i= 0;i < N-1;i++) {
+			if( visit[i] == 0) {
+				
+				visit[i] = 1;
+				operator[cnt] = oper[i];
+					
+				int j = i;
+				while(true) {
+					if(oper[j] == 0) {
+						
+					}
+				}
+
+				dfs(cnt+1);
+				visit[i] = 0;
+				
+			}
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		arr = new int[N];
+		oper = new int[4];
+		
+		operator = new int[N-1];
+		visit = new int[N-1];
+		
+		
+		for(int i = 0 ;i < N;i++) {
+			arr[i] = scan.nextInt();
+		}
+		for(int i = 0;i < 4;i++) {
+			oper[i] = scan.nextInt();
+		}
+		
+	}
+}

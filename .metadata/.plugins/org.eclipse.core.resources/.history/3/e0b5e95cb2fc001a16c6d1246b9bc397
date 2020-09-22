@@ -1,0 +1,76 @@
+package algorithm;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class BOJ_1931 {
+	static int N;
+	static class Time implements Comparable<Time>{
+		
+		int start;
+		int end; 
+		
+		Time(int start, int end){
+			this.start = start;
+			this.end = end;
+		}
+
+		@Override//오름차순 
+		public int compareTo(Time arg0) {
+			if(start == arg0.start) {
+				return 0;
+			}else if(start > arg0.start) {
+				return 1;
+			}else {
+				return -1;
+			}
+			
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		int max = 0;
+		ArrayList<Time> arr = new ArrayList<Time>();
+		
+		int start = 0;
+		int end = 0;
+		int cnt = 1;
+		for(int i = 0 ;i<N;i++) {
+			start = scan.nextInt();
+			end = scan.nextInt();
+			arr.add(new Time(start, end));
+		}
+		
+		Collections.sort(arr);
+		
+		System.out.println("yes");
+		for(int i = 0;i< arr.size();i++) {
+			System.out.print(arr.get(i).start +" ");
+		}
+		System.out.println("start");
+		
+		for(int i = 0;i< arr.size();i++) {
+			cnt = 1;
+			end = arr.get(i).end;
+			if(arr.size()-i  < cnt) {
+				break;
+			}
+			for(int j = i+1;j< arr.size();j++) {
+				if(end <arr.get(j).start ) {
+					cnt++;
+					end = arr.get(j).end;
+				}
+				
+			}
+			
+			if(cnt > max) {
+				max = Math.max(cnt, max);
+			}
+		}
+		System.out.println(max);
+	}
+}
