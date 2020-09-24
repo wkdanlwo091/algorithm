@@ -1,0 +1,11 @@
+package algorithm;
+
+public class BOJ_2108 {
+	
+	
+	public static void main(String[] args) {
+		int N;
+		Scanner scan = new Scanner(System.in)
+	}
+
+}

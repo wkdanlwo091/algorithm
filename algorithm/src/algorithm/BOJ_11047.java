@@ -1,0 +1,33 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_11047 {
+
+	
+	public static void main(String[] args) {
+		int N, K, cnt = 0;
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		K = scan.nextInt();
+		int A[] = new int[N];
+		
+		for(int i = 0 ;i < N;i++) {
+			A[i] = scan.nextInt();
+		}
+		for(int i = N-1;i >= 0 ;i--) {
+			
+			if(A[i] > K) {
+				
+			}else if(A[i] <= K) {
+				cnt += K/A[i];
+				K = K - (cnt)* A[i];
+				if(K == 0)
+					break;
+			}
+			
+		}
+		
+		System.out.println(cnt);
+	}
+}

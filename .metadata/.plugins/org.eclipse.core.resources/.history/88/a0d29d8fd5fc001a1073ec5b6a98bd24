@@ -1,0 +1,15 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_11047 {
+
+	
+	public static void main(String[] args) {
+		int N, K;
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		K = scan.nextInt();
+		int A[] = new int[];
+	}
+}

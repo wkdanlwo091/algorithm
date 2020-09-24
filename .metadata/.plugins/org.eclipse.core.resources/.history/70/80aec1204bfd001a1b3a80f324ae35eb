@@ -1,0 +1,10 @@
+package algorithm;
+
+public class BOJ_11720 {
+	static int N;
+
+
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,17 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_5622 {
+
+	public static void main(String[] args) {
+		String st;
+		int ans = 0;
+		Scanner scan = new Scanner(System.in);
+		st = scan.next();
+		ans += st.length();
+		
+		for(int i = 0;i )
+		
+	}
+}

@@ -1,0 +1,21 @@
+package algorithm;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class BOJ_10773 {
+	static int K;
+	
+	public static void main(String[] args) {
+		Stack<Integer> stack = new Stack<>();
+		Scanner scan = new Scanner(System.in);
+		int temp =0;
+		K = scan.nextInt();
+		
+		for(int i =0 ;i < K;i++) {
+
+		}
+		
+		
+	}
+}

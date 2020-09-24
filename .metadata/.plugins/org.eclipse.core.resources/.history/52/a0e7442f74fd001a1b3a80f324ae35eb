@@ -1,0 +1,23 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_5622 {
+
+	public static void main(String[] args) {
+		String st;
+		int ans = 0;
+		Scanner scan = new Scanner(System.in);
+		st = scan.next();
+
+		for (int i = 0; i < st.length(); i++) {
+
+			if(st.charAt(i) <= 'R')
+				ans += (int) (st.charAt(i) - 'A') / 3 + 3;
+			else if(st.charAt(i) <= 'S'){
+				ans += (int) (st.charAt(i) - 'A') / 3 + 2;
+			}
+		}
+		System.out.println(ans);
+	}
+}

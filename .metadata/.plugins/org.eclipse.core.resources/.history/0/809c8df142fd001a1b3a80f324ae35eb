@@ -1,0 +1,9 @@
+package algorithm;
+
+public class BOJ_10773 {
+	static int K;
+	
+	public static void main(String[] args) {
+		Stack<Integer> stack = new Stack<>();
+	}
+}

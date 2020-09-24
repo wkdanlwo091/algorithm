@@ -1,0 +1,9 @@
+package algorithm;
+
+public class BOJ_10773 {
+
+	
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,9 @@
+package algorithm;
+
+public class BOJ_4949 {
+
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner();
+	}
+}

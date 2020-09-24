@@ -1,0 +1,51 @@
+package algorithm;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class BOJ_4949 {
+
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Stack<Character> stc = new Stack<>();
+		String st ;
+		
+		while(true) {
+			st = scan.nextLine();
+			if(st.equals(".")) {
+				break;
+			}
+			
+			for(int i = 0 ;i < st.length();i++) {
+				if(st.charAt(i) == '[') {
+					stc.push(st.charAt(i));
+				}else if(st.charAt(i) == '(') {
+					stc.push(st.charAt(i));
+				}else if(st.charAt(i) == ']') {
+					if(stc.pop() == '[') {
+						
+					}else if(stc.pop() == '(') {
+						//no
+						System.out.println("no");break;
+					}
+				}else if(st.charAt(i) == ')') {
+					if(stc.pop() == '(') {
+						
+					}
+					else if(stc.pop() == '[') {
+						//no
+						System.out.println("no");break;
+					}
+				}
+				
+				
+				if(i == st.length()-1) {
+					System.out.println("yes");
+				}
+			}
+
+		}
+		
+	}
+}

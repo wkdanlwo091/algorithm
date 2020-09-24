@@ -1,0 +1,28 @@
+package algorithm;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class BOJ_2108 {
+	
+	
+	public static void main(String[] args) {
+		int N;
+		Scanner scan = new Scanner(System.in);
+		ArrayList<Integer> a = new ArrayList<>();
+		N = scan.nextInt();
+		
+		int temp;
+		int sum = 0;
+		for(int i= 0 ;i < N;i++) {
+			temp = scan.nextInt();
+			a.add(temp);
+			sum += temp;
+		}
+		Collections.sort(a);
+
+		
+	}
+
+}

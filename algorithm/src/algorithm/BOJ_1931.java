@@ -47,8 +47,6 @@ public class BOJ_1931 {
 				cnt++;
 			}
 		}
-		
 		System.out.println(cnt);
-		
 	}
 }
