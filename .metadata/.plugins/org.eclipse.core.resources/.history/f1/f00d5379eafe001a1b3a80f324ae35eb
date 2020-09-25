@@ -1,0 +1,22 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_10250 {
+
+	public static void main(String[] args) {
+		int T;
+		Scanner scan = new Scanner(System.in);
+		T =scan.nextInt();
+		int H,W,N;
+		for(int i =0;i < T;i++) {
+			H = scan.nextInt();
+			W = scan.nextInt();
+			N = scan.nextInt();
+			
+			int right = N/H + 1;//
+			int floor = N%H;
+			System.out.println(floor);
+		}
+	}
+}

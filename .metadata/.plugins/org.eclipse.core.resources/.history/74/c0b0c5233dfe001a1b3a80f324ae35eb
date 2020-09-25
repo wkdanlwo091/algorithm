@@ -1,0 +1,31 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_2839 {
+
+	static int dp(int N) {
+		//3과 5
+		if(N == 0) {
+			return 0;
+		}else if(N < 0){
+			return -1;
+		}
+		int a,b;
+		if(N-3 >= 0)
+			a = dp(N-3) + 1;
+		if(N-5 >= 0)
+		int b = dp(N-5) + 1;
+		
+		return Math.min(dp(N-3)+1, dp(N-5)+1);	
+	}
+	
+	public static void main(String[] args) {
+		int N;
+		Scanner scan = new Scanner(System.in);
+		//dp , 배달하는 봉지를 최소 개수를 출력한다.
+		N = scan.nextInt();
+		
+		dp(N);
+	}
+}

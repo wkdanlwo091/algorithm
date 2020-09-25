@@ -1,0 +1,23 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_2292 {
+	
+	public static void main(String[] args) {
+		
+		int N;
+		int num= 1;
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+
+		
+		if(N == 1) {
+			System.out.println("1");
+			return;
+		}
+		
+		for(int i = 1;i <=N;i++) {
+ 		}
+	}
+}
