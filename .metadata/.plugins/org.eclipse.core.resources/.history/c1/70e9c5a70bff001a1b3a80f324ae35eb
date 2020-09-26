@@ -1,0 +1,19 @@
+package algorithm;
+
+public class BOJ_11650 {
+
+	static class Position implements Comparable<Position>{
+		int x, y;
+		public Position(int x, int y){
+			this.x = x;
+			this.y = y;
+		}
+		@Override
+		public int compareTo(Position o) {
+			return 0;
+		}
+	}
+	public static void main(String[] args) {
+		
+	}
+}

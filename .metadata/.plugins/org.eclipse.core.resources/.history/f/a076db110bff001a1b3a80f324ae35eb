@@ -1,0 +1,11 @@
+package algorithm;
+
+public class BOJ_11650 {
+
+	static class Postion{
+		
+	}
+	public static void main(String[] args) {
+		
+	}
+}

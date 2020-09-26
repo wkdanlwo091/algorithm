@@ -1,0 +1,32 @@
+package algorithm;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class BOJ_10814 {
+
+	static class Person implements Comparable<Person>{
+		int age;
+		String name;
+		Person(int age, String name){
+			this.age = age;
+			this.name = name;
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		int N;
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		ArrayList<Person> arr = new ArrayList<>();
+		
+		int age;
+		String name;
+		for(int i =0 ;i < N;i++) {
+			age = scan.nextInt();
+			name = scan.next();
+			arr.add(new Person(age, name));
+		}
+	}
+}

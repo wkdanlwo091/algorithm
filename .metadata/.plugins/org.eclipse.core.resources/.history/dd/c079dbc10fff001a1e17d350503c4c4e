@@ -1,0 +1,24 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_1181_2 {
+	
+	static class Word implements Comparable<Word>{
+		String s;
+		Word(String s){
+			this.s = s;
+		}
+		@Override
+		public int compareTo(Word arg0) {
+			int r = s.compareTo(arg0.s);
+			return 0;
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		int N;
+		Scanner scan = new Scanner(System.in);	
+	}
+}

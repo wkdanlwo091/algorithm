@@ -1,0 +1,17 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_1904 {
+	static int N;
+	static int total = 0;
+	static int[] dp;
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		dp = new int[1000001];
+		
+		System.out.println(total%15746);
+	}
+
+}

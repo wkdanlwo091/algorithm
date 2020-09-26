@@ -1,0 +1,26 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_10814 {
+
+	static class Person{
+		int age;
+		String name;
+		Person(int age, String name){
+			this.age = age;
+			this.name = name;
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		int N;
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		ArrayList<Person> arr = new ArrayList<>();
+		for(int i =0 ;i < N;i++) {
+				
+		}
+	}
+}

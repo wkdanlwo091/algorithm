@@ -1,0 +1,37 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_14888_2 {
+	int N;
+	int A[];
+
+	static void dfs(int cnt, int plus, int minus, int multi, int divide, int total) {
+		if(cnt == N) {
+			
+		}
+		
+		return;
+	}
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		A = new int[N];
+		int plus =0;
+		int minus = 0;
+		int multi = 0;
+		int divide  = 0;
+		
+		for(int i =0 ;i < N;i++) {
+			A[i] = scan.nextInt();
+		}
+		
+		plus = scan.nextInt();
+		minus = scan.nextInt();
+		multi = scan.nextInt();
+		divide = scan.nextInt();
+		
+		dfs(0,plus, minus, multi, divide, 0);
+	}
+}

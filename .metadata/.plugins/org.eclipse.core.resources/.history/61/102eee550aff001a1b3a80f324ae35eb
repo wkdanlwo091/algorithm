@@ -1,0 +1,20 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_1101 {
+	
+	public static void main(String[] args) {
+		int T;
+		Scanner scan = new Scanner(System.in);
+		T = scan.nextInt();
+		int go = 1;
+		for(int i= 0;i < T;i++) {
+			int x,y;
+			x = scan.nextInt();
+			y = scan.nextInt();
+			
+		}
+	}
+
+}
