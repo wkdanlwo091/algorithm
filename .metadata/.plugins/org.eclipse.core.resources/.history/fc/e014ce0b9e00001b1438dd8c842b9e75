@@ -1,0 +1,14 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_2740 {
+	static int N, M, K;
+	static int [][]A;
+	static int [][]B;
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		
+	}
+}

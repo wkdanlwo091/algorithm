@@ -1,0 +1,11 @@
+package algorithm;
+
+public class BOJ_2740 {
+	static int N, M;
+	static int [][]A;
+	static int M, K;
+	static int [][]B;
+	public static void main(String[] args) {
+		
+	}
+}

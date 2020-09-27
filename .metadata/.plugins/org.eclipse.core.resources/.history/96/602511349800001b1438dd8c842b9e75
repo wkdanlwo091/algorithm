@@ -1,0 +1,10 @@
+package algorithm;
+
+public class BOJ_1780 {
+	static int N;
+	static int map[][];
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+	}
+}

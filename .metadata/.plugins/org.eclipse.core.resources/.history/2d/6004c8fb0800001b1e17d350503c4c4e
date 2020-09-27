@@ -1,0 +1,61 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_2630 {
+
+	static int N;
+	static int map[][];
+	static int w;
+	static int b;
+	
+	static void dac(int y, int x, int size){
+		int white = 0;
+		int blue = 0;
+		
+		if(size == 1) {
+			if(map[y][x] == 1) {
+				b++;
+			}
+			if(map[y][x] == 0) {
+				w++;
+			}
+		}
+		
+		for(int i= 1;i <= size;i++) {
+			for(int j= 1;j <= size;j++) {
+				if(map[i][j] == 1) {
+					blue++;
+				}else if(map[i][j] == 0) {
+					white++;
+				}
+			}
+		}
+		
+		if(white == size*size) {
+			w++;
+			return;
+		}
+		if(blue == size*size) {
+			b++;
+			return;
+		} 
+		
+		dac(y, x, size/2);
+		dac(y, x+ size/2, size/2);
+		dac(y+ size/2, x, size/2);
+		dac(y+ size/2, x + size/2, size/2);
+	}
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		map = new int[N+1][N+1];
+		for(int i=1 ;i <= N;i++) {
+			for(int j=1 ;j <= N;j++) {
+				map[i][j] = scan.nextInt();
+			}
+		}
+		dac(1,1,N);
+		
+	}
+}

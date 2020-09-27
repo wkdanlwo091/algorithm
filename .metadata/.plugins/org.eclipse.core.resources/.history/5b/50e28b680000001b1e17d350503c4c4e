@@ -1,0 +1,9 @@
+package algorithm;
+
+public class BOJ_2164 {
+	static int N;
+	
+	public static void main(String[] args) {
+		N = scan.nextInt();
+	}
+}

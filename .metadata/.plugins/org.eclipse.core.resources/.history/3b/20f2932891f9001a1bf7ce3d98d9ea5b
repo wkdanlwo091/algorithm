@@ -1,9 +1,0 @@
-package algorithm;
-
-public class WebCashBruteForce {
-	
-	public static void main(String[] args) {
-		
-		
-	}
-}

@@ -1,0 +1,37 @@
+package algorithm;
+
+import java.util.Scanner;
+
+public class BOJ_10830 {
+
+	static int N;
+	static int[][] A;
+	static int B;
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		N = scan.nextInt();
+		B = scan.nextInt();
+		A = new int[N+1][N+1];
+		
+		for(int i =1;i<= N;i++) {
+			for(int j = 1;j <= N;j++) {
+				A[i][j] = scan.nextInt();
+			}
+		}
+		
+		if(B == 1) {
+			for(int i =1;i<= N;i++) {
+				for(int j = 1;j <= N;j++) {
+					System.out.print(A[i][j] + " ");
+				}
+				System.out.println();
+			}
+		}else {
+			for(int i = 1;i <= B;i++) {
+				
+			}
+		}
+		
+	}
+}
